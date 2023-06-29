@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class HomePage {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to Home Page!");
+
+        // Main menu loop
+        boolean homePageRunning = true;
+        while (homePageRunning) {
+            System.out.println("\nMenu Options:");
+            System.out.println("1. View Profile");
+            System.out.println("2. Edit Profile");
+            System.out.println("3. View Notifications");
+            System.out.println("4. App Settings");
+            System.out.println("5. Logout");
+            System.out.print("Enter your choice: ");
+            int choice = input.nextInt();
+            input.nextLine(); // Clear the buffer
+
+            switch (choice) {
+                case 1:
+                    viewProfile();
+                    break;
+                case 2:
+                    editProfile();
+                    break;
+                case 3:
+                    viewNotifications();
+                    break;
+                case 4:
+                    appSettings();
+                    break;
+                case 5:
+                    homePageRunning = false;
+                    System.out.println("Logging out...");
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+
+        input.close();
+    }
+
+    public static void viewProfile() {
+        System.out.println("\n--- View Profile ---");
+        // Add your code here to display the user's profile information
+    }
+
+    public static void editProfile() {
+        System.out.println("\n--- Edit Profile ---");
+        // Add your code here to allow the user to edit their profile
+    }
+
+    public static void viewNotifications() {
+        System.out.println("\n--- View Notifications ---");
+        // Add your code here to display the user's notifications
+    }
+
+    public static void appSettings() {
+        System.out.println("\n--- App Settings ---");
+        // Add your code here to handle the app settings
+    }
+}

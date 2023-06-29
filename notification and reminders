@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class NotificationApp {
+    private static List<String> notifications = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome to Notification App!");
+
+        // Main menu loop
+        boolean appRunning = true;
+        while (appRunning) {
+            System.out.println("\nMenu Options:");
+            System.out.println("1. View Notifications");
+            System.out.println("2. Send Reminder");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = input.nextInt();
+            input.nextLine(); // Clear the buffer
+
+            switch (choice) {
+                case 1:
+                    viewNotifications();
+                    break;
+                case 2:
+                    sendReminder(input);
+                    break;
+                case 3:
+                    appRunning = false;
+                    System.out.println("Exiting Notification App...");
+                    break;
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+
+        input.close();
+    }
+
+    public static void viewNotifications() {
+        System.out.println("\n--- View Notifications ---");
+        if (notifications.isEmpty()) {
+            System.out.println("No notifications available.");
+        } else {
+            System.out.println("Notifications:");
+            for (String notification : notifications) {
+                System.out.println(notification);
+            }
+        }
+    }
+
+    public static void sendReminder(Scanner input) {
+        System.out.println("\n--- Send Reminder ---");
+        System.out.print("Enter reminder message: ");
+        String reminder = input.nextLine();
+        notifications.add(reminder);
+        System.out.println("Reminder sent successfully.");
+    }
+}

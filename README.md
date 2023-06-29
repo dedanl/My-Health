@@ -1,34 +1,18 @@
-# My-Health# Project Name
+## Getting Started
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-Short description of your project.
+## Folder Structure
 
-## Features
+The workspace contains two folders by default, where:
 
-- Feature 1
-- Feature 2
-- Feature 3
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
 
-## Installation
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-Provide instructions on how to install and run the project.
+> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Usage
+## Dependency Management
 
-Provide examples and instructions on how to use your project.
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Inspiration
-- References
-- Any other acknowledgments or credits
-
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
